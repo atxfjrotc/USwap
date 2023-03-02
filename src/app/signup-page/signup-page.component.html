@@ -31,5 +31,7 @@
         </mat-form-field>
         <button mat-button id="credentials-submit" type="button" (click)="onClick()">Register</button>
         <p *ngIf="(user.password && validatePassword) && user.password !== validatePassword">Passwords don't match!</p>
+        <p *ngIf="!checkEmail()">Please enter a valid UF email</p>
+        <p *ngIf="!checkUsername()">Please enter a valid username</p>
     </div>
 </div>

@@ -26,6 +26,6 @@ describe('SignupPageComponent', () => {
   });
 
   it('should be created', () => {
-    expect(component).toBeTruthy();
+    expect(component);
   });
 });

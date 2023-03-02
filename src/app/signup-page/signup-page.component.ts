@@ -22,18 +22,16 @@ export class SignupPageComponent {
 
   constructor(private router: Router, private route: ActivatedRoute, private signupService: SignupService ) {}
 
-  // check if username is taken in database
+  // TODO: check if username is taken in database
   checkUsername() {
     return true;
   }
 
-  // check if email is taken in database
+  // TODO: check if email is taken in database
   checkEmail() {
     // checking for a valid UF email
     const re = /^\w+([\.-]?\w+)*@ufl.edu/gm;
-    if (re.test(this.user.email))
-      return true;
-    return false;
+    return re.test(this.user.email);
   }
 
   checkPassword(): boolean {
@@ -52,8 +50,6 @@ export class SignupPageComponent {
   }
 
   onClick() {
-    this.addUser();
-    //this.router.navigate(['../login'], {relativeTo: this.route});
     if (this.checkUsername()) {
       if (this.checkEmail()) {
         if (this.checkPassword()) {

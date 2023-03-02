@@ -110,9 +110,9 @@ type user struct {
 }
 
 type User struct {
-	Username string `json:"Username"`
-	Email string `json:"Email"`
-	Password string `json:"Password"`
+	Username string `json:"username"`
+	Email string `json:"email"`
+	Password string `json:"password"`
 }
 
 type Login struct {
